@@ -1,11 +1,14 @@
 package main
 
 import (
-	"github.com/misterclayt0n/go-algorithms/algorithms"
+	// "github.com/misterclayt0n/go-algorithms/algorithms"
+	ds "github.com/misterclayt0n/go-algorithms/data_structures"
 )
 
 func main() {
-	a := []int{13, 1, 2, 8, 7, 5}
+	ll := ds.SinglyLinkedList{}
 
-	algorithms.BubbleSort(a)
+	ll.Prepend(9)
+	ll.Prepend(6)
+	ll.Print()
 }
