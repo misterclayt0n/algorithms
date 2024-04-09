@@ -5,26 +5,26 @@ import (
 )
 
 // type node
-type Node struct {
+type nodeLinkedList struct {
 	Value int
-	Next  *Node
+	Next  *nodeLinkedList
 }
 
 // type linkedlist
 type SinglyLinkedList struct {
-	Head *Node
+	Head *nodeLinkedList
 }
 
 // insert at the beginning -> prepend
 func (ll *SinglyLinkedList) Prepend(value int) {
-	newNode := &Node{Value: value}
+	newNode := &nodeLinkedList{Value: value}
 
 	newNode.Next = ll.Head
 	ll.Head = newNode
 }
 
 func (ll *SinglyLinkedList) Print() {
-	// first node
+	// first nodeLinkedList
 	current := ll.Head
 
 	for current != nil {
