@@ -1,14 +1,17 @@
 package main
 
 import (
-	"fmt"
-
-	al "github.com/misterclayt0n/go-algorithms/algorithms"
-	// ds "github.com/misterclayt0n/go-algorithms/data_structures"
+	ds "github.com/misterclayt0n/go-algorithms/data_structures"
 )
 
 func main() {
-	arr := []int{3, 6, 8, 10, 1, 2, 1}
-	fmt.Println("Array original:", arr)
-	fmt.Println("Array ordenado:", al.QuickSort(arr))
+	dll := ds.DoublyLinkedList{}
+	dll.Append(10)
+	dll.Append(20)
+	dll.Append(30)
+	dll.Print()
+	dll.RemoveLast()
+	dll.Print()
+	dll.InsertAt(40, 1)
+	dll.Print()
 }
