@@ -3,21 +3,23 @@ package main
 import (
 	"fmt"
 
-	ds "github.com/misterclayt0n/go-algorithms/data_structures"
+	al "github.com/misterclayt0n/go-algorithms/algorithms"
+	// ds "github.com/misterclayt0n/go-algorithms/data_structures"
 )
 
 func main() {
-	root := ds.NewBinaryTreeNode(10)
-	root.Insert(20)
-	root.Insert(30)
-	root.Insert(40)
+	root := al.NewBinaryNode(10)
+	root.Left = al.NewBinaryNode(20)
+	root.Right = al.NewBinaryNode(30)
+	root.Left.Left = al.NewBinaryNode(40)
+	root.Right.Right = al.NewBinaryNode(50)
+	root.Right.Left = al.NewBinaryNode(60)
+	root.Left.Right = al.NewBinaryNode(70)
 
-	fmt.Println("In-order traversal:")
-	root.InOrder()
-
-	fmt.Println("Pre-order traversal:")
-	root.PreOrder()
-
-	fmt.Println("Post-order traversal:")
-	root.PostOrder()
+	needle := 30
+	if al.Bfs(root, needle) {
+		fmt.Printf("valor %d encontrado na árvore\n", needle)
+	} else {
+		fmt.Printf("valor %d não encontrado na árvore\n", needle)
+	}
 }
