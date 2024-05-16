@@ -7,6 +7,7 @@ List of algorithms:
   - Two Crystal Ball Problem -> $O(\sqrt{ N })$
   - Breadth-First Search (BFS) in Binary Tree -> $O(V + E)$
   - Maze Solver -> Complexity depends on the algorithm
+  - Binary Tree Comparison -> $O(n)$
 
 List of Data Structures: 
   - Binary Tree
