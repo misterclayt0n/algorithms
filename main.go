@@ -8,18 +8,8 @@ import (
 )
 
 func main() {
-	root := al.NewBinaryNode(10)
-	root.Left = al.NewBinaryNode(20)
-	root.Right = al.NewBinaryNode(30)
-	root.Left.Left = al.NewBinaryNode(40)
-	root.Right.Right = al.NewBinaryNode(50)
-	root.Right.Left = al.NewBinaryNode(60)
-	root.Left.Right = al.NewBinaryNode(70)
+	tree1 := &al.TreeNode{Value: 2, Left: &al.TreeNode{Value: 1}, Right: &al.TreeNode{Value: 3}}
+	tree2 := &al.TreeNode{Value: 1, Left: &al.TreeNode{Value: 2}, Right: &al.TreeNode{Value: 3}}
 
-	needle := 30
-	if al.Bfs(root, needle) {
-		fmt.Printf("valor %d encontrado na árvore\n", needle)
-	} else {
-		fmt.Printf("valor %d não encontrado na árvore\n", needle)
-	}
+	fmt.Println(al.CompareTrees(tree1, tree2))
 }
