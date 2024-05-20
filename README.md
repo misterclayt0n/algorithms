@@ -11,6 +11,7 @@ List of algorithms:
 
 List of Data Structures: 
   - Binary Tree
+  - Binary Search Tree
   - Doubly Linked List 
   - Queue
   - Ring Buffer
