@@ -8,26 +8,19 @@ import (
 )
 
 func main() {
-	root := ds.NewBSTNode(10)
-	root.Insert(5)
-	root.Insert(15)
-	root.Insert(3)
-	root.Insert(7)
-	root.Insert(12)
-	root.Insert(17)
+	m := &ds.MinHeap{}
 
-	// Impressão da BST em ordem
-	fmt.Println("Árvore em ordem:")
-	root.PrintInOrder() // Output: 3 5 7 10 12 15 17
-	fmt.Println()
+	fmt.Println(m)
 
-	// Busca de valores
-	fmt.Println("Busca 7:", root.Search(7))  // Output: true
-	fmt.Println("Busca 9:", root.Search(9))  // Output: false
+	m.Insert(10)
+	m.Insert(20)
+	m.Insert(30)
+	m.Insert(5)
+	m.Insert(40)
+	m.Insert(50)
 
-	// Remoção de valores
-	root.Remove(5)
-	fmt.Println("Árvore em ordem após remover 5:")
-	root.PrintInOrder() // Output: 3 7 10 12 15 17
-	fmt.Println()
+	fmt.Println(m.Array)
+
+	fmt.Println("Extracted:", m.Extract())
+	fmt.Println(m.Array)
 }

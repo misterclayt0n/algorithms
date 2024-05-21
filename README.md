@@ -6,11 +6,13 @@ List of algorithms:
   - Bubble Sort -> $O(n^2)$
   - Two Crystal Ball Problem -> $O(\sqrt{ N })$
   - Breadth-First Search (BFS) in Binary Tree -> $O(V + E)$
+  - Depth-First Search (DFS) in Binary Search Tree -> $O(V + E)$
   - Maze Solver -> Complexity depends on the algorithm
   - Binary Tree Comparison -> $O(n)$
 
 List of Data Structures: 
   - Binary Tree
+  - MinHeap
   - Binary Search Tree
   - Doubly Linked List 
   - Queue
