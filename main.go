@@ -18,4 +18,7 @@ func main() {
 
 	fmt.Println("BFS a partir do vértice 0:")
 	listGraph.BFS(0)
+
+	fmt.Println("DFS a partir do vértice 0:")
+	listGraph.DFS(0)
 }

@@ -63,3 +63,20 @@ func (g *AdjacentListGraph) BFS(start int) {
 
 	fmt.Println()
 }
+
+func (g *AdjacentListGraph) DFS(start int) {
+	visited := make(map[int]bool)
+	g.dfsUtil(start, visited)
+	fmt.Println()
+}
+
+func (g *AdjacentListGraph) dfsUtil(v int, visited map[int]bool) {
+	visited[v] = true
+	fmt.Print(v, " ")
+
+	for _, neighbor := range g.vertices[v] {
+		if !visited[neighbor] {
+			g.dfsUtil(neighbor, visited)
+		}
+	}
+}
