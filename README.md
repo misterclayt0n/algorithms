@@ -9,6 +9,7 @@ List of algorithms:
   - Depth-First Search (DFS) in Binary Search Tree -> $O(V + E)$
   - Maze Solver -> Complexity depends on the algorithm
   - Binary Tree Comparison -> $O(n)$
+  - Dijkstra -> $O(n^2)$
 
 List of Data Structures: 
   - Binary Tree
