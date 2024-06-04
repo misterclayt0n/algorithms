@@ -20,3 +20,4 @@ List of Data Structures:
   - Ring Buffer
   - Singly Linked List
   - Stack
+  - AVL tree
