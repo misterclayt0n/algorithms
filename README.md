@@ -21,3 +21,4 @@ List of Data Structures:
   - Singly Linked List
   - Stack
   - AVL tree
+  - Red-Black tree

@@ -10,14 +10,14 @@ import (
 )
 
 func main() {
-	AVLTree := ds.NewAVLTree()
-	AVLTree.Insert(10)
-	AVLTree.Insert(20)
-	AVLTree.Insert(30)
-	AVLTree.Insert(40)
-	AVLTree.Insert(50)
-	AVLTree.Insert(25)
+    tree := ds.NewRedBlackTree()
+    tree.Insert(10)
+    tree.Insert(20)
+    tree.Insert(30)
+    tree.Insert(40)
+    tree.Insert(50)
+    tree.Insert(25)
 
-	fmt.Println("pre-order traversal of the constructed AVL tree:")
-    AVLTree.PreOrder(AVLTree.Root)
+    fmt.Println("pre-order traversal of the constructed red-black tree:")
+    tree.PreOrder(tree.Root)
 }
