@@ -1,4 +1,4 @@
-# Algorithms and Data Structures in Go
+# Algorithms and Data Structures in Go && C
 
 List of algorithms:
   - Linear Search -> $O(n)$
@@ -11,11 +11,11 @@ List of algorithms:
   - Binary Tree Comparison -> $O(n)$
   - Dijkstra -> $O(n^2)$
 
-List of Data Structures: 
+List of Data Structures:
   - Binary Tree
   - MinHeap
   - Binary Search Tree
-  - Doubly Linked List 
+  - Doubly Linked List
   - Queue
   - Ring Buffer
   - Singly Linked List
