@@ -1,4 +1,47 @@
-*.exe
-*.dll
-*.bin
+# Ignore binaries and build artifacts
+zig/zig-out/
+zig-out/
 *.o
+*.exe
+*.bin
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore directories for build tools
+.zig-cache/
+build/
+dist/
+out/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore editor and IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.backup
+*.tmp
+*.log
+*.sass-cache/
+*.pid
+*.seed
+*.cover
+*.coverage
+node_modules/
+npm-debug.log*
+.yarn/
+.yarn-integrity
+.pnpm-debug.log*
+target/
+Cargo.lock
