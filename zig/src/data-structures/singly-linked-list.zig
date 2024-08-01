@@ -46,7 +46,7 @@ pub const SinglyLinkedList = struct {
     pub fn print(self: *@This()) !void {
         var current = self.head;
 
-        while(current) |node| {
+        while (current) |node| {
             try stdout.print("{} -> ", .{node.data});
             current = node.next;
         }
@@ -61,3 +61,26 @@ pub const SinglyLinkedList = struct {
         }
     }
 };
+
+test "SinglyLinkedList - basic operations" {
+    var allocator = std.testing.allocator;
+
+    var list = SinglyLinkedList.create(&allocator);
+
+    try std.testing.expect(list.head == null);
+
+    try list.prepend(10);
+    try list.prepend(20);
+    try list.prepend(30);
+
+    try std.testing.expect(list.head.?.data == 30);
+    try std.testing.expect(list.head.?.next.?.data == 20);
+    try std.testing.expect(list.head.?.next.?.next.?.data == 10);
+
+    try list.print();
+
+    list.remove_first();
+    try std.testing.expect(list.head.?.data == 20);
+
+    list.destroy();
+}
