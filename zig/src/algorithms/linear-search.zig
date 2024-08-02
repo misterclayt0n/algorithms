@@ -1,4 +1,5 @@
 const std = @import("std");
+
 pub fn linear_search(array: []const i32, x: i32) bool {
     for (array) |item| {
         if (item == x) {
