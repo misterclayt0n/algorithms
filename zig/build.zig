@@ -28,7 +28,8 @@ pub fn build(b: *std.Build) void {
     const test_sources = [_][]const u8{
         "src/algorithms/linear-search.zig",
         "src/data-structures/queue.zig",
-        "src/data-structures/stack.zig"
+        "src/data-structures/stack.zig",
+        "src/data-structures/doubly-linked-list.zig"
     };
 
     const test_step = b.step("test", "Run unit tests");
