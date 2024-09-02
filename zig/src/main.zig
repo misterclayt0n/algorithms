@@ -1,24 +1,14 @@
 const std = @import("std");
-const DoublyLinkedList = @import("data-structures/doubly-linked-list.zig").DoublyLinkedList;
+const hash = @import("data-structures/hash-map.zig");
 
 pub fn main() !void {
-    var allocator = std.heap.page_allocator;
+    var map = try hash.Map.init();
 
-    var list = DoublyLinkedList{
-        .head = null,
-        .tail = null,
-        .allocator = &allocator,
-    };
+    try map.insert("test", 32);
+    try map.insert("test1", 16);
+    try map.insert("test2", 8);
+    try map.insert("test3", 2);
 
-    defer list.destroy();
-
-    try list.append(10);
-    try list.append(20);
-    try list.append(30);
-    try list.prepend(5);
-    try list.insert_at(15, 2);
-
-    std.debug.print("DoublyLinkedList: ", .{});
-    list.print();
-    std.debug.print("\n", .{});
+    const result: u32 = try map.get("test2");
+    std.debug.print("Hello, world! {d}\n", .{result});
 }
