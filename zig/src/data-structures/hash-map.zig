@@ -14,7 +14,7 @@ const Elem = struct {
     is_used: bool,
 };
 
-pub const Map = struct {
+pub const HashMap = struct {
     capacity: usize,
     pub var val: std.ArrayList(Elem) = undefined;
     pub var map_s: usize = 0;
@@ -27,7 +27,7 @@ pub const Map = struct {
         return result;
     }
 
-    pub fn insert(self: Map, key: [*:0]const u8, value: u32) !void {
+    pub fn insert(self: HashMap, key: [*:0]const u8, value: u32) !void {
         if (map_s >= self.capacity) return InsertError.MapFull;
         var index: usize = hash(key) % self.capacity;
         while (val.items[index].is_used) {
@@ -43,18 +43,18 @@ pub const Map = struct {
         map_s += 1;
     }
 
-    pub fn get(self: Map, key: [*:0]const u8) !u32 {
+    pub fn get(self: HashMap, key: [*:0]const u8) !u32 {
         for (0..self.capacity) |i| {
             if (val.items[i].key == key) return val.items[i].value;
         }
         return GetError.KeyNotFound;
     }
 
-    pub fn init() !Map {
+    pub fn init() !HashMap {
         const allocator = std.heap.page_allocator;
         map_s = 0;
         val = std.ArrayList(Elem).init(allocator);
         val.items = try val.addManyAsArray(32);
-        return Map{.capacity = 32};
+        return HashMap{.capacity = 32};
     }
 };
