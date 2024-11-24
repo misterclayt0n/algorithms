@@ -22,3 +22,4 @@ List of Data Structures:
   - Stack
   - AVL tree
   - Red-Black tree
+  - One-time pad
