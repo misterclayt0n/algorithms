@@ -1,5 +1,6 @@
 # Ignore binaries and build artifacts
 zig/zig-out/
+zig/.zig-cache/
 zig-out/
 *.o
 *.exe
