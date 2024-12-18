@@ -1,0 +1,21 @@
+// Zed's tasks for this repo.
+[
+  {
+    "label": "zig",
+    "command": "cd zig/ && zig build test",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "rust",
+    "command": "cd rust && cargo test",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+]
