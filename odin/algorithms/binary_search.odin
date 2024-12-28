@@ -27,8 +27,15 @@ binary_search :: proc(array: []i32, x: i32) -> bool {
 }
 
 @(test)
-test_binary_search :: proc(t: ^testing.T) {
+test_binary_search_success :: proc(t: ^testing.T) {
 	array := []i32{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	ok := binary_search(array, 10)
 	testing.expect(t, ok)
+}
+
+@(test)
+test_binary_search_fail :: proc(t: ^testing.T) {
+	array := []i32{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	ok := binary_search(array, 11)
+	testing.expect(t, !ok)
 }
