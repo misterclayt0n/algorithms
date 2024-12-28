@@ -12,7 +12,6 @@ fn bubble_sort(array: &mut [i32]) {
 mod tests {
     use super::*;
 
-
     #[test]
     fn test_bubble_sort_1() {
         let mut array = [5, 2, 9, 1, 5, 6];
