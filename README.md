@@ -1,4 +1,4 @@
-# Algorithms and Data Structures in Go, C, Zig && Rust
+# Algorithms and Data Structures in Go, C, Zig, Rust && Odin
 
 List of algorithms:
   - Linear Search -> $O(n)$
