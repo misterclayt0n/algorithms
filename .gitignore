@@ -48,5 +48,4 @@ target/
 Cargo.lock
 
 # Odin bin
-odin/algorithms/algorithms
-odin/data_structures/data_structures
+odin/odin

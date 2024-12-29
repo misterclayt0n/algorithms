@@ -1,11 +1,11 @@
-package data_structures
+package main
 
-import "core:testing"
 import "core:fmt"
+import "core:testing"
 
 node_stack :: struct {
 	value: i32,
-	prev:     ^node_stack,
+	prev:  ^node_stack,
 }
 
 stack :: struct {
@@ -18,12 +18,14 @@ peek_stack :: proc(s: ^stack) -> i32 {
 }
 
 push_stack :: proc(s: ^stack, value: i32) {
-	new_node := node_stack { value = value, prev = s.head }
-	s.head^ = new_node
+	new_node := new(node_stack) 
+	new_node.value = value 
+	new_node.prev = s.head
+	s.head^ = new_node^
 }
 
-pop_stack :: proc (s: ^stack) -> i32 {
-	if s.head == nil do return -1 
+pop_stack :: proc(s: ^stack) -> i32 {
+	if s.head == nil do return -1
 	popped_value := s.head.value
 	s.head = s.head.prev
 	return popped_value
@@ -33,9 +35,11 @@ pop_stack :: proc (s: ^stack) -> i32 {
 test_stack :: proc(t: ^testing.T) {
 	start_node := node_stack {
 		value = 10,
-		prev = nil
+		prev  = nil,
 	}
-	stack := stack { head = &start_node }
+	stack := stack {
+		head = &start_node,
+	}
 
 	push_stack(&stack, 20)
 	testing.expect(t, stack.head.value == 20)
@@ -49,4 +53,3 @@ test_stack :: proc(t: ^testing.T) {
 	popped_value := pop_stack(&stack)
 	testing.expect(t, popped_value == 40)
 }
-

@@ -1,4 +1,4 @@
-package algorithms
+package main
 
 import "core:fmt"
 import "core:testing"

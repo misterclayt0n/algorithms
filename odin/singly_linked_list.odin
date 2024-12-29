@@ -1,4 +1,4 @@
-package data_structures
+package main
 
 import "core:fmt"
 import "core:testing"
