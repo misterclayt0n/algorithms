@@ -3,6 +3,7 @@ package main
 import "core:fmt"
 import "core:testing"
 
+@(private="file")
 node_linked_list :: struct {
 	value: i32,
 	next:  ^node_linked_list,
@@ -12,6 +13,7 @@ singly_linked_list :: struct {
 	head: ^node_linked_list,
 }
 
+@(private="file")
 prepend_singly_linked_list :: proc(
 	ll: ^singly_linked_list,
 	value: i32,
@@ -24,6 +26,7 @@ prepend_singly_linked_list :: proc(
 	ll.head = new_node
 }
 
+@(private="file")
 print_singly_linked_list :: proc(ll: ^singly_linked_list) {
 	current := ll.head
 	for current != nil {
@@ -33,6 +36,7 @@ print_singly_linked_list :: proc(ll: ^singly_linked_list) {
 	fmt.printf("NULL\n")
 }
 
+@(private="file")
 remove_first_singly_linked_list :: proc(ll: ^singly_linked_list) {
 	if ll.head != nil do ll.head = ll.head.next
 }
