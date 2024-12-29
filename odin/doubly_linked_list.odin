@@ -32,15 +32,3 @@ print :: proc(ll: ^doubly_linked_list) {
 	}
 	fmt.println("NULL")
 }
-
-main :: proc() {
-	list := new(doubly_linked_list)
-
-    prepend(list, 10);
-    prepend(list, 20);
-    prepend(list, 30);
-    prepend(list, 40);
-    prepend(list, 50);
-
-    print(list);
-}
